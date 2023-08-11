@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Torje's Keyboard</title>
+</head>
+<body>
+    <div id="text-container"></div>
+    <div id="keyboard-container">
+        <div class="row1 unselectable">
+            <button class="key" id="vertline" onclick="pressKey(this)">|</button>
+            <button class="key" id="1" onclick="pressKey(this)">1</button>
+            <button class="key" id="2" onclick="pressKey(this)">2</button>
+            <button class="key" id="3" onclick="pressKey(this)">3</button>
+            <button class="key" id="4" onclick="pressKey(this)">4</button>
+            <button class="key" id="5" onclick="pressKey(this)">5</button>
+            <button class="key" id="6" onclick="pressKey(this)">6</button>
+            <button class="key" id="7" onclick="pressKey(this)">7</button>
+            <button class="key" id="8" onclick="pressKey(this)">8</button>
+            <button class="key" id="9" onclick="pressKey(this)">9</button>
+            <button class="key" id="0" onclick="pressKey(this)">0</button>
+            <button class="key" id="+" onclick="pressKey(this)">+</button>
+            <button class="key" id="\" onclick="pressKey(this)">\</button>
+            <button id="backspace" onclick="pressBackspace()">⟵</button>
+        </div>
+        <div class="row2 unselectable">
+            <button id="tab" onclick="pressTab()">⭾</button>
+            <button class="key" id="q" onclick="pressKey(this)">q</button>
+            <button class="key" id="w" onclick="pressKey(this)">w</button>
+            <button class="key" id="e" onclick="pressKey(this)">e</button>
+            <button class="key" id="r" onclick="pressKey(this)">r</button>
+            <button class="key" id="t" onclick="pressKey(this)">t</button>
+            <button class="key" id="y" onclick="pressKey(this)">y</button>
+            <button class="key" id="u" onclick="pressKey(this)">u</button>
+            <button class="key" id="i" onclick="pressKey(this)">i</button>
+            <button class="key" id="o" onclick="pressKey(this)">o</button>
+            <button class="key" id="p" onclick="pressKey(this)">p</button>
+            <button class="key" id="å" onclick="pressKey(this)">å</button>
+            <button class="key" id="¨" onclick="pressKey(this)">¨</button>
+            <button id="enter" onclick="pressEnter()">↵</button>
+        </div>
+        <div class="row3 unselectable">
+            <button id="caps" onclick="pressCaps()">⇪</button>
+            <button class="key" id="a" onclick="pressKey(this)">a</button>
+            <button class="key" id="s" onclick="pressKey(this)">s</button>
+            <button class="key" id="d" onclick="pressKey(this)">d</button>
+            <button class="key" id="f" onclick="pressKey(this)">f</button>
+            <button class="key" id="g" onclick="pressKey(this)">g</button>
+            <button class="key" id="h" onclick="pressKey(this)">h</button>
+            <button class="key" id="j" onclick="pressKey(this)">j</button>
+            <button class="key" id="k" onclick="pressKey(this)">k</button>
+            <button class="key" id="l" onclick="pressKey(this)">l</button>
+            <button class="key" id="ø" onclick="pressKey(this)">ø</button>
+            <button class="key" id="æ" onclick="pressKey(this)">æ</button>
+            <button class="key" id="'" onclick="pressKey(this)">'</button>
+        </div>
+        <div class="row4 unselectable">
+            <button id="l-shift" onclick="pressShift()">⇧</button>
+            <button class="key" id="lessthan"><</button>
+            <button class="key" id="z">z</button>
+            <button class="key" id="x">x</button>
+            <button class="key" id="c">c</button>
+            <button class="key" id="v">v</button>
+            <button class="key" id="b">b</button>
+            <button class="key" id="n">n</button>
+            <button class="key" id="m">m</button>
+            <button class="key" id=",">,</button>
+            <button class="key" id=".">.</button>
+            <button class="key" id="-">-</button>
+            <button id="r-shift" onclick="pressShift()">⇧</button>
+        </div>
+        <div class="row5">
+            <button id="l-ctrl">Ctrl</button>
+            <button class="windows" id="l-windows">
+                &#x25a0;&#x25a0;<br>
+                &#x25a0;&#x25a0;<br>
+            <button id="l-alt">Alt</button>
+            <button id="spacebar">␣</button>
+            <button id="r-alt">Alt</button>
+            <button class="windows" id="r-windows">
+                &#x25a0;&#x25a0;<br>
+                &#x25a0;&#x25a0;<br>
+            </button>
+            <button id="theme">☼</button>
+            <button id="r-ctrl">Ctrl</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
