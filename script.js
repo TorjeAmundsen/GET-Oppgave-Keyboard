@@ -151,10 +151,10 @@ function updateKeyboard() {
 let themeID = 0;
 
 function changeTheme() {
+    themeID === 0 ? themeID = 1 : themeID = 0;
     let root = document.querySelector(":root");
 
     for (let [key, value] of Object.entries(themeValues)) {
         root.style.setProperty(key, value[themeID]);
     };
-    themeID === 0 ? themeID = 1 : themeID = 0;
 };
