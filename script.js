@@ -1,4 +1,14 @@
 // Modifier order: Lowercase, uppercase, ctrl, alt, shift
+const themeValues = {
+    "--background-color":   ["#ffffff", "#0e1018"],
+    "--outline-color":      ["#cccccc", "#192535"],
+    "--gradient-default":   ["linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(235, 238, 241) 85%, rgb(215, 221, 224) 100%)", "linear-gradient(180deg, rgb(31, 43, 61) 0%, rgb(25, 32, 41) 85%, rgb(13, 15, 19) 100%)"],
+    "--gradient-hover":     ["linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 85%, rgb(221, 237, 245) 100%)", "linear-gradient(180deg, rgb(45, 63, 92) 0%, rgb(29, 37, 48) 85%, rgb(13, 15, 19) 100%)"],
+    "--glow":               ["0px 2px 10px rgba(97, 179, 255, 0.7)", "0px 2px 10px rgba(22, 81, 136, 0.7)"],
+    "--key-text-color":     ["rgb(39, 45, 53)", "#cccccc"],
+    "--text-color":         ["black", "#cccccc"]
+}
+
 const keysNordic = {
 
     // ROW 1
@@ -136,4 +146,15 @@ function updateKeyboard() {
     for (let key of allKeys) {
         key.innerText = keysNordic[key.id][modIndex];
     };
+};
+
+let themeID = 0;
+
+function changeTheme() {
+    let root = document.querySelector(":root");
+
+    for (let [key, value] of Object.entries(themeValues)) {
+        root.style.setProperty(key, value[themeID]);
+    };
+    themeID === 0 ? themeID = 1 : themeID = 0;
 };

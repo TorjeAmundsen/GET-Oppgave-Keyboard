@@ -1,13 +1,22 @@
+:root {
+    --background-color: #ffffff;
+    --outline-color: #cccccc;
+    --gradient-default: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(235, 238, 241) 85%, rgb(215, 221, 224) 100%);
+    --gradient-hover: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 85%, rgb(221, 237, 245) 100%);
+    --glow: 0px 2px 10px rgba(97, 179, 255, 0.7);
+    --key-text-color: rgb(39, 45, 53);
+    --text-color: black;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #ffffff;
+    background-color: var(--background-color);
 }
 #text-container {
     padding: 5px 5px;
     outline-style: solid;
     outline-width: 1px;
     border-radius: 4px;
-    outline-color: #cccccc;
     width: 46.875rem;
     height: 36.5rem;
     position: absolute;
@@ -16,6 +25,8 @@ body {
     font-size: 20px;
     white-space: pre-wrap;
     tab-size: 12;
+    outline-color: var(--outline-color);
+    color: var(--text-color);
 }
 #keyboard-container {
     position: absolute;
@@ -27,9 +38,6 @@ body {
 button {
     margin: 5px 5px;
     padding: 0px 0px;
-    color: rgb(39, 45, 53);
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgb(235, 238, 241) 85%, rgb(215, 221, 224) 100%);
     font-size: 20px;
     width: 40px;
     height: 40px;
@@ -37,14 +45,16 @@ button {
     border-radius: 4px;
     outline-style: solid;
     outline-width: 1px;
-    outline-color: #cccccc;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
     transition: 150ms;
+    color: var(--key-text-color);
+    outline-color: var(--outline-color);
+    background: var(--gradient-default);
 }
 button:hover, .pressed {
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 85%, rgb(221, 237, 245) 100%);
-    box-shadow: 0px 2px 10px rgba(97, 179, 255, 0.7);
+    background: var(--gradient-hover);
+    box-shadow: var(--glow);
 }
 button:active {
     transform: scale(94%);
@@ -107,7 +117,7 @@ button:active {
     width: 50px;
 }
 #spacebar {
-    color: rgba(0, 0, 0, 0);
+    color: var(--key-text-color);
     width: 310px;
 }
 #r-alt {
